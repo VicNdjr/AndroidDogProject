@@ -2,11 +2,12 @@ package com.example.victorianadjar.myproject;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -26,7 +27,6 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         final int id = getIntent().getIntExtra("id",0);
-        //Refaire appel avec l'id
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
@@ -38,33 +38,37 @@ public class Main2Activity extends AppCompatActivity {
 
         DogRestApi dogRestApi = retrofit.create(DogRestApi.class);
 
-        Call<Breed> call = dogRestApi.getDetails(id);
+        Call<List<Image>> call = dogRestApi.getImage(id);
 
-        call.enqueue(new Callback<Breed>() {
+        call.enqueue(new Callback<List<Image>>() {
             @Override
-            public void onResponse(Call<Breed> call, Response<Breed> response) {
-                Breed breed = response.body();
+            public void onResponse(Call<List<Image>> call, Response<List<Image>> response) {
+                List<Image> breed = response.body();
                 showList(breed);//list en parametre puis traitement des données dans showlist
             }
 
             @Override
-            public void onFailure(Call<Breed> call, Throwable t) {
+            public void onFailure(Call<List<Image>> call, Throwable t) {
 
             }
         });
 
 
     }
-    private void showList(Breed breed) {
+
+    private void showList(List<Image> list) {
+        Image image = list.get(0);
+        Breed breed = image.getBreeds().get(0);
         TextView txt1 = findViewById(R.id.breed_name);
         TextView txt2 = findViewById(R.id.breed_group);
         TextView txt3 = findViewById(R.id.life_span);
         TextView txt4 = findViewById(R.id.temperament);
+        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+
+        Picasso.with(getBaseContext()).load(image.getUrl()).fit().into(imageView);
         txt1.append(breed.getName());
         txt2.append(breed.getBreed_group());
         txt3.append(breed.getLife_span());
         txt4.append(breed.getTemperament());
-
     }
-
 }

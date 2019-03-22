@@ -7,6 +7,7 @@ public class Breed {
     private String breed_group;
     private String life_span;
     private String temperament;
+    private String origin;
 
     public int getId() {
         return id;
@@ -26,5 +27,9 @@ public class Breed {
 
     public String getTemperament() {
         return temperament;
+    }
+
+    public String getOrigin() {
+        return origin;
     }
 }
