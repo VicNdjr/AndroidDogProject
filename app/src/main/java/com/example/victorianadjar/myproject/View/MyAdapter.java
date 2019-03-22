@@ -1,10 +1,14 @@
-package com.example.victorianadjar.myproject;
+package com.example.victorianadjar.myproject.View;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.victorianadjar.myproject.Model.Breed;
+import com.example.victorianadjar.myproject.Controller.OnItemClickListener;
+import com.example.victorianadjar.myproject.R;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.victorianadjar.myproject;
+package com.example.victorianadjar.myproject.Model;
 
 public class Breed {
 

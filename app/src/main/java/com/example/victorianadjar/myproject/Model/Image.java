@@ -1,4 +1,6 @@
-package com.example.victorianadjar.myproject;
+package com.example.victorianadjar.myproject.Model;
+
+import com.example.victorianadjar.myproject.Model.Breed;
 
 import java.util.List;
 
