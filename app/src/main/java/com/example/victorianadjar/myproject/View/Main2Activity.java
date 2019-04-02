@@ -25,6 +25,7 @@ public class Main2Activity extends AppCompatActivity {
 
     }
 
+
     public void showList(List<Image> list) {
         Image image = list.get(0);
         Breed breed = image.getBreeds().get(0);
