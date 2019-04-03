@@ -26,11 +26,11 @@ Cette application affiche une liste de races de chien et permet, lorsque l'on cl
 
 - Affichage de la liste de races de chien, avec possibilité de trouver une race en particulier grâce à une barre de recherche.
 
-<img src="img_readme/list.png" alt="liste races" high=400 width=200>
-<img src="img_readme/search.png" alt="recherche race">
+<img src="img_readme/list.png" alt="liste races" high=600 width=300>
+<img src="img_readme/search.png" alt="recherche race" high=600 width=300>
 
 ### Ecran Details
 
 - Affichage des détails relatifs à une race en particulier : groupe, durée de vie, tempéramment et photo de l'animal.
 
-<img src="img_readme/detail.png" alt="détails race">
+<img src="img_readme/detail.png" alt="détails race" high=600 width=300>
