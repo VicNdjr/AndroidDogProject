@@ -64,6 +64,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
         return values.size();
     }
 
+    //Gestion barre de recherche
     @Override
     public Filter getFilter() {
         return filter;
