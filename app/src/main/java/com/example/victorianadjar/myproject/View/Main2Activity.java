@@ -21,8 +21,6 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         MyController myController = new MyController(this);
         myController.getItem();
-
-
     }
 
     public void showList(List<Image> list) {
